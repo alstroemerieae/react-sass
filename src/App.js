@@ -1,9 +1,23 @@
-import Home from './components/Home';
 import './sass/App.scss';
+import Home from './components/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 function App() {
   return (
-    <Home/>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
