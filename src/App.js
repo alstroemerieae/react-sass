@@ -2,15 +2,13 @@ import './sass/App.scss';
 import image from './assets/Ellipse 46.png'
 import vector from './assets/Vector.svg'
 import Header from './components/Header';
+import Subheader from './components/Subheader';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <div className="App-subheader">
-        <p className="App-subheader-title">My projects</p>
-        <button className="Button">Add project</button>
-      </div>
+      <Subheader/>
       <div className="App-projects">
         <div className="App-projects-list">
           {/* Project #1 */}
