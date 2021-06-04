@@ -179,9 +179,17 @@ body {
   flex-direction: column;
 }
 .App .App-project .App-project--form .App-project--form__label {
+  display: flex;
   font-size: 14px;
   color: #262626;
   margin-bottom: 0.25rem;
+}
+.App .App-project .App-project--form .App-project--form__error-message {
+  display: flex;
+  align-items: center;
+  color: red;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
 }
 .App .App-project .App-project--form .App-project--form__input {
   border: 1px solid #D9D9D9;
