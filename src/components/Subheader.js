@@ -1,14 +1,20 @@
+import { Link } from "react-router-dom"
+
 const Subheader = ({icon, iconDescription, title, buttonText}) => {
   return (
     <div className="App-subheader">
       { icon &&
-        <div className="App-subheader--icon-container">
+        <Link to={`/`} className="App-subheader--icon-container">
           <img className="App-subheader--icon-container__icon" src={icon} alt="3"/>
           <p className="App-subheader--icon-container__icon-description">{iconDescription}</p>
-        </div> 
+        </Link>
       }
       <p className="App-subheader-title">{title}</p>
-      { buttonText && <button className="Button">{buttonText}</button>}
+      { buttonText && 
+        <Link to={`/add`}>
+          <button className="Button">{buttonText}</button>
+        </Link>
+      }
     </div>
   );
 }

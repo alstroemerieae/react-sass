@@ -1,13 +1,6 @@
 import './sass/App.scss';
 import Home from './components/Home';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AddProject from './components/AddProject';
 import EditProject from './components/EditProject';
 
@@ -21,7 +14,7 @@ function App() {
         <Route path="/add">
           <AddProject/>
         </Route>
-        <Route path="/edit">
+        <Route path="/update/:id">
           <EditProject/>
         </Route>
       </Switch>

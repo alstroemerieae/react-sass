@@ -26,33 +26,6 @@
       "projectmanager": "Walt Cosani",
       "projectstatus": "enabled",
       "id": 3
-    },
-    {
-      "projectName": "Testing",
-      "projectDescription": "Adding my first project",
-      "projectDate": "Creation date:  09/09/2020 10:30 am",
-      "projectManager": "Walt Cosani",
-      "projectDeveloper": "Ignacio Truffa",
-      "projectStatus": "enabled",
-      "id": 4
-    },
-    {
-      "projectname": "Test",
-      "projectdescription": "Adding my second project",
-      "projectdate": "Creation date:  09/09/2020 10:30 am",
-      "projectmanager": "Walt Cosani",
-      "projectdeveloper": "Ignacio Truffa",
-      "projectstatus": "enabled",
-      "id": 5
-    },
-    {
-      "projectname": "delete",
-      "projectdescription": "delete this",
-      "projectdate": "Creation date:  09/09/2020 10:30 am",
-      "projectmanager": "Walt Cosani",
-      "projectdeveloper": "Ignacio Truffa",
-      "projectstatus": "enabled",
-      "id": 6
     }
   ]
 }

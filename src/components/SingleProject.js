@@ -5,8 +5,15 @@ import { Popover } from 'react-tiny-popover'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-const SingleProject = ({projectName, projectDate, userImage, userName}) => {
+const SingleProject = ({projectName, projectDate, projectDeveloperImage, projectDeveloper, projectID}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  const handleDelete = () => {
+    fetch('http://localhost:8000/projects/' + projectID, {
+      method: 'DELETE'
+    })
+    console.log("Deleting project...");
+  }
 
   return (
     <div className="App-project">
@@ -22,10 +29,10 @@ const SingleProject = ({projectName, projectDate, userImage, userName}) => {
       {/* Project user section */}
       <div className="App-project--user">
         <div className="App-project--user__image">
-          <img src={userImage} alt="Project user name"></img>
+          <img src={projectDeveloperImage} alt="Project Developer"></img>
         </div>
         <div className="App-project--user__name">
-          {userName}
+          {projectDeveloper}
         </div>
       </div>
       {/* Project menu PopOver */}
@@ -36,11 +43,11 @@ const SingleProject = ({projectName, projectDate, userImage, userName}) => {
           <div className="popOverMenu">
             <div className="popOverMenu--link-container">
               <img className="popOverMenu--link-container__icon" src={editIcon} alt="" />
-              <Link className="popOverMenu--link-container__link" to="/edit">Edit</Link>
+              <Link className="popOverMenu--link-container__link" to={`/update/${projectID}`}>Edit</Link>
             </div>
             <div className="popOverMenu--link-container">
               <img className="popOverMenu--link-container__icon" src={deleteIcon} alt="" />
-              <Link className="popOverMenu--link-container__link" to="/delete">Delete</Link>
+              <Link className="popOverMenu--link-container__link" onClick={handleDelete}>Delete</Link>
             </div>
           </div>
         }
@@ -50,7 +57,7 @@ const SingleProject = ({projectName, projectDate, userImage, userName}) => {
             <img src={menuIcon} alt="Menu icon" />
           </div>
         </div>
-      </Popover>;
+      </Popover>
     </div>
   );
 }
