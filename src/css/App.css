@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 body {
@@ -56,7 +57,6 @@ body {
 .popOverMenu .popOverMenu--link-container .popOverMenu--link-container__link {
   font-size: 12px;
   color: #262626;
-  text-decoration: none;
 }
 .popOverMenu .popOverMenu--link-container .popOverMenu--link-container__icon {
   margin-left: 1rem;
@@ -105,6 +105,8 @@ body {
   margin-left: 1rem;
 }
 .App .App-subheader .App-subheader--icon-container .App-subheader--icon-container__icon-description {
+  display: flex;
+  align-items: center;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.65);
   margin: 0rem 0.5rem;
@@ -164,24 +166,24 @@ body {
   left: 320px;
   top: 14px;
 }
-.App .App-new-project {
+.App .App-project {
   color: rgba(0, 0, 0, 0.65);
   width: 100%;
   height: 100%;
 }
-.App .App-new-project .App-new-project--form {
+.App .App-project .App-project--form {
   padding: 2rem 1rem;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
 }
-.App .App-new-project .App-new-project--form .App-new-project--form__label {
+.App .App-project .App-project--form .App-project--form__label {
   font-size: 14px;
   color: #262626;
   margin-bottom: 0.25rem;
 }
-.App .App-new-project .App-new-project--form .App-new-project--form__input {
+.App .App-project .App-project--form .App-project--form__input {
   border: 1px solid #D9D9D9;
   box-sizing: border-box;
   border-radius: 4px;

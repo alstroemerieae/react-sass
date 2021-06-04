@@ -4,6 +4,7 @@ $secondaryColor: #c99a37;
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 body {
@@ -61,7 +62,7 @@ body {
       // background-color: red;
       font-size: 12px;
       color: #262626;
-      text-decoration: none;
+      // text-decoration: none;
     }
     .popOverMenu--link-container__icon {
       // background-color: green;
@@ -116,11 +117,15 @@ body {
       display: flex;
       // border: 1px solid green;
       .App-subheader--icon-container__icon {
+        // display: flex;
+        // align-items: center;
         // color: rgba(0, 0, 0, 0.65);
         color: blue;
         margin-left: 1rem;
       }
       .App-subheader--icon-container__icon-description {
+        display: flex;
+        align-items: center;
         font-size: 12px;
         color: rgba(0, 0, 0, 0.65);
         margin: 0rem .5rem;
@@ -197,12 +202,12 @@ body {
       top: 14px;
     }
   }
-  .App-new-project {
+  .App-project {
     // background-color: rgba(0, 255, 0, 0.5);
     color: rgba(0, 0, 0, 0.65);
     width: 100%;
     height: 100%;
-    .App-new-project--form {
+    .App-project--form {
       padding: 2rem 1rem;
       // color: red;
       background-color: #FFFFFF;
@@ -210,12 +215,12 @@ body {
       // border: 1px solid red;
       display: flex;
       flex-direction: column;
-      .App-new-project--form__label {
+      .App-project--form__label {
         font-size: 14px;
         color: #262626;
         margin-bottom: 0.25rem;
       }
-      .App-new-project--form__input {
+      .App-project--form__input {
         border: 1px solid #D9D9D9;
         box-sizing: border-box;
         border-radius: 4px;
