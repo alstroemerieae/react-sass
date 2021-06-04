@@ -8,13 +8,17 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import AddProject from './components/AddProject';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home/>
+        </Route>
+        <Route path="/add">
+          <AddProject/>
         </Route>
       </Switch>
     </Router>
