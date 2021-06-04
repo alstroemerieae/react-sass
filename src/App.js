@@ -1,13 +1,12 @@
 import './sass/App.scss';
 import image from './assets/Ellipse 46.png'
 import vector from './assets/Vector.svg'
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <div className="App-header">
-        <p className="App-header-title">LOGO</p>
-      </div>
+      <Header/>
       <div className="App-subheader">
         <p className="App-subheader-title">My projects</p>
         <button className="Button">Add project</button>
