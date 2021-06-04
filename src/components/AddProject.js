@@ -1,12 +1,13 @@
 import Header from '../components/Header';
 import Subheader from '../components/Subheader';
 import NewProject from './NewProject';
+import backArrowItem from '../assets/backArrowIcon.svg'
 
 const AddProject = () => {
   return (
     <div className="App">
       <Header/>
-      <Subheader title="Add project"/>
+      <Subheader icon={backArrowItem} iconDescription={"Back"} title="Add project"/>
       <NewProject/>
     </div>
   );

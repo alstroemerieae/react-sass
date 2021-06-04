@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="App">
       <Header/>
-      <Subheader title="My project"/>
+      <Subheader icon="" iconDescription="" title="My projects" buttonText="Add project"/>
       <Projects/>
     </div>
   );
