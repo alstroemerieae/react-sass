@@ -1,7 +1,16 @@
 import image from '../assets/Ellipse 46.png'
-import vector from '../assets/Vector.svg'
+import menuIcon from '../assets/menuIcon.svg'
+import deleteIcon from '../assets/deleteIcon.svg'
+import editIcon from '../assets/editIcon.svg'
+import { Popover } from 'react-tiny-popover'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  console.log(isPopoverOpen);
+
+
   return (
     <div className="App-projects">
       <div className="App-projects-list">
@@ -26,11 +35,29 @@ const Projects = () => {
           </div>
           </div>
           {/* Project menu icon */}
-          <div className="App-project--menu">
-            <div className="App-project--menu__icon">
-              <img src={vector} alt="Menu icon" />
+          <Popover
+            isOpen={isPopoverOpen}
+            positions={['top', 'bottom', 'left', 'right']} // preferred positions by priority
+            content={
+              <div className="popOverMenu">
+                <div className="popOverMenu--link-container">
+                  <img className="popOverMenu--link-container__icon" src={editIcon} alt="" />
+                  <Link className="popOverMenu--link-container__link" to="/edit">Edit</Link>
+                </div>
+                <div className="popOverMenu--link-container">
+                  <img className="popOverMenu--link-container__icon" src={deleteIcon} alt="" />
+                  <Link className="popOverMenu--link-container__link" to="/delete">Delete</Link>
+                </div>
+              </div>
+            }
+          >
+            <div className="App-project--menu" onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+              <div className="App-project--menu__icon">
+                <img src={menuIcon} alt="Menu icon" />
+              </div>
             </div>
-          </div>
+          </Popover>;
+
         </div>
         {/* Project #1 End */}
         {/* Project #2 */}
@@ -56,7 +83,7 @@ const Projects = () => {
           {/* Project menu icon */}
           <div className="App-project--menu">
             <div className="App-project--menu__icon">
-              <img src={vector} alt="Menu icon" />
+              <img src={menuIcon} alt="Menu icon" />
             </div>
           </div>
         </div>
@@ -84,7 +111,7 @@ const Projects = () => {
           {/* Project menu icon */}
           <div className="App-project--menu">
             <div className="App-project--menu__icon">
-              <img src={vector} alt="Menu icon" />
+              <img src={menuIcon} alt="Menu icon" />
             </div>
           </div>
         </div>
