@@ -6,7 +6,7 @@ const AddProject = () => {
   return (
     <div className="App">
       <Header/>
-      <Subheader/>
+      <Subheader title="Add project"/>
       <NewProject/>
     </div>
   );
