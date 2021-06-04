@@ -1,24 +1,111 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
-  background-color: #282c34;
   min-height: 100vh;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: red;
+  background-color: #F0F2F5;
 }
-.App .App-box {
-  border: 2px solid #c99a37;
-  padding: 2rem;
+.App .App-header {
+  padding: 0.75rem 0rem;
+  color: #BDBDBD;
+  background: #FFFFFF;
+  box-shadow: inset 0px -1px 0px #D9D9D9;
+  width: 100%;
 }
-.App .App-box .Title {
-  color: #6255da;
+.App .App-header .App-header-title {
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 14px;
+}
+.App .App-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0rem;
+  color: rgba(0, 0, 0, 0.85);
+  background: #FFFFFF;
+  box-shadow: inset 0px -1px 0px #D9D9D9;
+  width: 100%;
+}
+.App .App-subheader .App-subheader-title {
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 16px;
+}
+.App .App-subheader .Button {
+  background: #F5222D;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  margin-right: 1rem;
+}
+.App .App-projects {
+  background-color: rgba(0, 255, 0, 0.5);
+  color: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+}
+.App .App-projects-list {
+  background-color: rgba(0, 255, 98, 0.5);
+}
+.App .App-project {
+  width: 100%;
+  padding: 0rem 0rem;
+  background-color: white;
+  box-shadow: inset 0px -1px 0px #D9D9D9;
+  height: 5rem;
+  position: relative;
+  color: rgba(0, 0, 0, 0.65);
+}
+.App .App-project .App-project--details {
+  padding: 0.25rem 0.75rem;
+}
+.App .App-project .App-project--details .App-project--details__name {
+  font-size: 14px;
+  line-height: 20px;
+}
+.App .App-project .App-project--details .App-project--details__creation-date {
+  font-size: 10px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.App .App-project .App-project--user {
+  padding: 0.25rem 0.75rem;
+  display: flex;
+}
+.App .App-project .App-project--user .App-project--user__image {
+  margin-right: 0.5rem;
+}
+.App .App-project .App-project--user .App-project--user__name {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 22px;
+}
+.App .App-project .App-project--menu {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 320px;
+  top: 14px;
 }
