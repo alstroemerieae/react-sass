@@ -2,11 +2,13 @@ import { Field, Form, Formik } from 'formik';
 import React, { useState } from 'react';
 import { useParams } from "react-router";
 import useFetch from '../hooks/useFetch';
+import { useHistory } from "react-router-dom";
 
 const ModifyProject = () => {
   const { id } = useParams();
   const { error } = useFetch('http://localhost:8000/projects/' + id);
   const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
 
   // I'm not sure what kind of validation you guys wanted, so I simply validated that the fields were not empty.
   function validateField(value) {
@@ -36,6 +38,11 @@ const ModifyProject = () => {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedValues)
+          })
+          .then(() => {
+            console.log("New blog added!")
+            setIsLoading(false)
+            history.push("/")
           })
         }}
       >
