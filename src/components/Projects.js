@@ -1,13 +1,12 @@
+import image from '../assets/Ellipse 46.png';
 import SingleProject from "./SingleProject";
-import image from '../assets/Ellipse 46.png'
 
-const Projects = ({projects}) => {
-  // console.log(projects[0].projectname)
+const Projects = ({ projects }) => {
   return (
     <div className="App-projects">
       <div className="App-projects-list">
         {projects.map((project) => (
-          <SingleProject 
+          <SingleProject
             projectName={project.projectname}
             projectDescription={project.projectdescription}
             projectDate={project.projectdate}

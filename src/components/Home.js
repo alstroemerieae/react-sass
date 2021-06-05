@@ -1,6 +1,6 @@
 import Header from '../components/Header';
-import Subheader from '../components/Subheader';
 import Projects from '../components/Projects';
+import Subheader from '../components/Subheader';
 import useFetch from '../hooks/useFetch';
 
 const Home = () => {
@@ -8,11 +8,11 @@ const Home = () => {
 
   return (
     <div className="App">
-      <Header/>
-      <Subheader icon="" iconDescription="" title="My projects" buttonText="Add project"/>
-      { error && <div>{ error }</div> }
-      { isLoading && <div>Loading...</div> }
-      { projects && <Projects projects={projects}/> }
+      <Header />
+      <Subheader icon="" iconDescription="" title="My projects" buttonText="Add project" />
+      { error && <div>{error}</div>}
+      { isLoading && <div>Loading...</div>}
+      { projects && <Projects projects={projects} />}
     </div>
   );
 }

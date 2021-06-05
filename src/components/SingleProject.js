@@ -1,11 +1,11 @@
-import menuIcon from '../assets/menuIcon.svg'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Popover } from 'react-tiny-popover'
 import deleteIcon from '../assets/deleteIcon.svg'
 import editIcon from '../assets/editIcon.svg'
-import { Popover } from 'react-tiny-popover'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import menuIcon from '../assets/menuIcon.svg'
 
-const SingleProject = ({projectName, projectDate, projectDeveloperImage, projectDeveloper, projectID}) => {
+const SingleProject = ({ projectName, projectDate, projectDeveloperImage, projectDeveloper, projectID }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const handleDelete = () => {

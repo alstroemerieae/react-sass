@@ -1,8 +1,7 @@
-import React from 'react';
-import { useState } from "react";
+import { Field, Form, Formik } from 'formik';
+import React, { useState } from 'react';
 import { useParams } from "react-router";
-import { Formik, Field, Form } from 'formik';
-import useFetch from '../hooks/useFetch'
+import useFetch from '../hooks/useFetch';
 
 const ModifyProject = () => {
   const { id } = useParams();
@@ -31,30 +30,29 @@ const ModifyProject = () => {
         }}
         onSubmit={values => {
           let updatedValues = values;
-          // console.log(test);
           setIsLoading(true);
           console.log("Updating project...");
           fetch('http://localhost:8000/projects/' + id, {
             method: 'PUT',
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedValues)
           })
         }}
       >
-        {({ errors, touched, isValidating }) => (
+        {({ errors, touched }) => (
           <Form className="App-project--form">
             {/* Project name */}
             <label className="App-project--form__label" htmlFor="projectname">
               <p>Project Name</p>
               {errors.projectname && touched.projectname && <div className="App-project--form__error-message">{errors.projectname}</div>}
             </label>
-            <Field className="App-project--form__input" name="projectname" validate={validateField}/>
+            <Field className="App-project--form__input" name="projectname" validate={validateField} />
             {/* Project description */}
             <label className="App-project--form__label" htmlFor="projectdescription">
               <p>Description</p>
               {errors.projectdescription && touched.projectdescription && <div className="App-project--form__error-message">{errors.projectdescription}</div>}
             </label>
-            <Field className="App-project--form__input" name="projectdescription" validate={validateField}/>
+            <Field className="App-project--form__input" name="projectdescription" validate={validateField} />
             {/* Project manager */}
             <label className="App-project--form__label" htmlFor="projectmanager">
               <p>Project manager</p>
@@ -85,9 +83,9 @@ const ModifyProject = () => {
               <option value="disabled">Disabled</option>
             </Field>
             {/* Submit button */}
-            { error && <div>{ error }</div> }
-            { !isLoading && <button className="Button-Big" type="submit">Save changes</button> }
-            { isLoading && <button className="Button-Big">Saving changes...</button> }
+            { error && <div>{error}</div>}
+            { !isLoading && <button className="Button-Big" type="submit">Save changes</button>}
+            { isLoading && <button className="Button-Big">Saving changes...</button>}
           </Form>
         )}
       </Formik>

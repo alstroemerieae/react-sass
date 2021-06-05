@@ -2,36 +2,12 @@
 
 @media only screen and (min-width: $lg) {
   .App-form {
-    border: 1px solid cyan;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: gray;
   }
   .App-project--form {
-    border: 1px solid cyan;
     width: 600px;
     margin: auto;
   }
 }
-
-// @media only screen and (min-width: $xs) {
-//   .App-project {
-//     border: 1px solid red;
-//   }
-// }
-// @media only screen and (min-width: $sm) {
-//   .App-project {
-//     border: 1px solid blue;
-//   }
-// }
-// @media only screen and (min-width: $md) {
-//   .App-project {
-//     border: 1px solid green;
-//   }
-// }
-// @media only screen and (min-width: $xl) {
-//   .App-project {
-//     border: 1px solid magenta;
-//   }
-// }
