@@ -1,3 +1,18 @@
+@media only screen and (min-width: 992px) {
+  .App-form {
+    border: 1px solid cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+  }
+
+  .App-project--form {
+    border: 1px solid cyan;
+    width: 600px;
+    margin: auto;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -117,21 +132,16 @@ body {
   padding: 0.5rem 1rem;
 }
 .App .App-projects {
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: white;
   color: rgba(0, 0, 0, 0.65);
   width: 100%;
   height: 100%;
 }
-.App .App-projects-list {
-  background-color: rgba(0, 255, 98, 0.5);
-}
 .App .App-project {
   width: 100%;
   padding: 0rem 0rem;
-  background-color: white;
   box-shadow: inset 0px -1px 0px #D9D9D9;
   height: 5rem;
-  position: relative;
   color: rgba(0, 0, 0, 0.65);
 }
 .App .App-project .App-project--details {
