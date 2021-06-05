@@ -135,16 +135,27 @@ body {
   color: rgba(0, 0, 0, 0.65);
 }
 .App .App-project .App-project--details {
+  border: 1px solid red;
   padding: 0.25rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
 }
-.App .App-project .App-project--details .App-project--details__name {
+.App .App-project .App-project--details .App-project--details-values {
+  border: 1px solid blue;
+}
+.App .App-project .App-project--details .App-project--details-values .App-project--details--values__name {
   font-size: 14px;
   line-height: 20px;
 }
-.App .App-project .App-project--details .App-project--details__creation-date {
+.App .App-project .App-project--details .App-project--details-values .App-project--details-values__creation-date {
   font-size: 10px;
   line-height: 16px;
   color: rgba(0, 0, 0, 0.45);
+}
+.App .App-project .App-project--details .App-project--menu {
+  border: 1px solid green;
+  display: flex;
+  width: 1rem;
 }
 .App .App-project .App-project--user {
   padding: 0.25rem 0.75rem;
@@ -158,13 +169,6 @@ body {
   align-items: center;
   font-size: 12px;
   line-height: 22px;
-}
-.App .App-project .App-project--menu {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 320px;
-  top: 14px;
 }
 .App .App-project {
   color: rgba(0, 0, 0, 0.65);

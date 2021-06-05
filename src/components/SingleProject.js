@@ -19,12 +19,38 @@ const SingleProject = ({projectName, projectDate, projectDeveloperImage, project
     <div className="App-project">
       {/* Project details section */}
       <div className="App-project--details">
-        <div className="App-project--details__name">
-          {projectName}
+        {/* Project details */}
+        <div className="App-project--details-values">
+          <div className="App-project--details--values__name">
+            {projectName}
+          </div>
+          <div className="App-project--details-values__creation-date">
+            {projectDate}
+          </div>
         </div>
-        <div className="App-project--details__creation-date">
-          {projectDate}
-        </div>
+        {/* Project PopOver menu */}
+        <Popover
+          isOpen={isPopoverOpen}
+          positions={['top', 'bottom', 'left', 'right']} // preferred positions by priority
+          content={
+            <div className="popOverMenu">
+              <div className="popOverMenu--link-container">
+                <img className="popOverMenu--link-container__icon" src={editIcon} alt="" />
+                <Link className="popOverMenu--link-container__link" to={`/update/${projectID}`}>Edit</Link>
+              </div>
+              <div className="popOverMenu--link-container">
+                <img className="popOverMenu--link-container__icon" src={deleteIcon} alt="" />
+                <Link className="popOverMenu--link-container__link" onClick={handleDelete}>Delete</Link>
+              </div>
+            </div>
+          }
+        >
+          <div className="App-project--menu" onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+            <div className="App-project--menu__icon">
+              <img src={menuIcon} alt="Menu icon" />
+            </div>
+          </div>
+        </Popover>
       </div>
       {/* Project user section */}
       <div className="App-project--user">
@@ -35,29 +61,6 @@ const SingleProject = ({projectName, projectDate, projectDeveloperImage, project
           {projectDeveloper}
         </div>
       </div>
-      {/* Project menu PopOver */}
-      <Popover
-        isOpen={isPopoverOpen}
-        positions={['top', 'bottom', 'left', 'right']} // preferred positions by priority
-        content={
-          <div className="popOverMenu">
-            <div className="popOverMenu--link-container">
-              <img className="popOverMenu--link-container__icon" src={editIcon} alt="" />
-              <Link className="popOverMenu--link-container__link" to={`/update/${projectID}`}>Edit</Link>
-            </div>
-            <div className="popOverMenu--link-container">
-              <img className="popOverMenu--link-container__icon" src={deleteIcon} alt="" />
-              <Link className="popOverMenu--link-container__link" onClick={handleDelete}>Delete</Link>
-            </div>
-          </div>
-        }
-      >
-        <div className="App-project--menu" onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-          <div className="App-project--menu__icon">
-            <img src={menuIcon} alt="Menu icon" />
-          </div>
-        </div>
-      </Popover>
     </div>
   );
 }
