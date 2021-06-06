@@ -4,7 +4,8 @@ import Subheader from '../components/Subheader';
 import useFetch from '../hooks/useFetch';
 
 const Home = () => {
-  const { data: projects, isLoading, error } = useFetch('http://localhost:8000/projects')
+  // const { data: projects, isLoading, error } = useFetch('http://localhost:8000/projects')
+  const { data: projects, isLoading, error } = useFetch('https://react-sass-server.herokuapp.com/projects')
 
   return (
     <div className="App">

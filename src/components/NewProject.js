@@ -30,7 +30,8 @@ const NewProject = () => {
           let newValues = values;
           setIsLoading(true);
           console.log("Creating new project...")
-          fetch('http://localhost:8000/projects', {
+          // fetch('http://localhost:8000/projects', {
+          fetch('https://react-sass-server.herokuapp.com/projects', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newValues)

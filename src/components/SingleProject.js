@@ -9,7 +9,8 @@ const SingleProject = ({ projectName, projectDate, projectDeveloperImage, projec
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const handleDelete = () => {
-    fetch('http://localhost:8000/projects/' + projectID, {
+    // fetch('http://localhost:8000/projects/' + projectID, {
+    fetch('https://react-sass-server.herokuapp.com/projects/' + projectID, {
       method: 'DELETE'
     })
     console.log("Deleting project...");

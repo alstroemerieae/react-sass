@@ -6,7 +6,8 @@ import { useHistory } from "react-router-dom";
 
 const ModifyProject = () => {
   const { id } = useParams();
-  const { error } = useFetch('http://localhost:8000/projects/' + id);
+  // const { error } = useFetch('http://localhost:8000/projects/' + id);
+  const { error } = useFetch('https://react-sass-server.herokuapp.com/projects/' + id);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
@@ -34,7 +35,8 @@ const ModifyProject = () => {
           let updatedValues = values;
           setIsLoading(true);
           console.log("Updating project...");
-          fetch('http://localhost:8000/projects/' + id, {
+            // fetch('http://localhost:8000/projects/' + id, {
+            fetch('https://react-sass-server.herokuapp.com/projects/' + id, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedValues)
