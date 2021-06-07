@@ -27,6 +27,74 @@
     margin: auto;
   }
 }
+@media only screen and (max-width: 768px) {
+  .table {
+    width: 90%;
+    text-align: left;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-spacing: 0;
+  }
+  .table .table-head {
+    background-color: white;
+  }
+  .table .table-head .table-head-row {
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0px -1px 0px #D9D9D9;
+    display: none;
+  }
+  .table .table-head .table-head-headercell {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    padding: 1rem;
+  }
+  .table .table-body .table-body-row {
+    background-color: white;
+    box-shadow: inset 0px -1px 0px #D9D9D9;
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0.25rem 0.5rem;
+  }
+  .table .table-body .table-body-datacell {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    padding: 0.25rem !important;
+  }
+  .table .table-body .table-body-datacell:nth-child(even) {
+    background-color: yellow;
+    display: none;
+  }
+  .table .table-body .table-body-datacell:nth-child(3) {
+    grid-row: 2/3;
+  }
+  .project-info .project-info__date {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 12px;
+  }
+
+  .project-manager {
+    display: flex;
+    align-items: center;
+    border: 1px solid cyan;
+    display: none !important;
+  }
+  .project-manager .project-manager__image {
+    margin-right: 0.5rem;
+  }
+  .project-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: none !important;
+  }
+  .project-status .project-status__value {
+    background: #F5F5F5;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+  }
+}
 /* #    01. Global variables & Utility classes    # */
 * {
   margin: 0;
@@ -221,4 +289,65 @@ body {
   height: 2.5rem;
   padding-left: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.table {
+  width: 90%;
+  text-align: left;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-spacing: 0;
+  background-color: cyan;
+}
+.table .table-head {
+  background-color: white;
+}
+.table .table-head .table-head-row {
+  background: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0px -1px 0px #D9D9D9;
+}
+.table .table-head .table-head-headercell {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  padding: 1rem;
+}
+.table .table-body .table-body-row {
+  background-color: white;
+  box-shadow: inset 0px -1px 0px #D9D9D9;
+}
+.table .table-body .table-body-datacell {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  padding: 1rem;
+}
+
+.project-info .project-info__date {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.project-manager {
+  display: flex;
+  align-items: center;
+}
+.project-manager .project-manager__image {
+  margin-right: 0.5rem;
+}
+.project-developer {
+  display: flex;
+  align-items: center;
+}
+.project-developer .project-developer__image {
+  margin-right: 0.5rem;
+}
+.project-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.project-status .project-status__value {
+  background: #F5F5F5;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
 }

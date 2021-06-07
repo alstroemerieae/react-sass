@@ -1,4 +1,4 @@
-import image from '../assets/Ellipse 46.png';
+// import image from '../assets/Ellipse 46.png';
 import SingleProject from "./SingleProject";
 
 const Projects = ({ projects }) => {
@@ -11,7 +11,7 @@ const Projects = ({ projects }) => {
             projectDescription={project.projectdescription}
             projectDate={project.projectdate}
             projectDeveloper={project.projectdeveloper}
-            projectDeveloperImage={image}
+            // projectDeveloperImage={image}
             projectID={project.id}
             // projectManager={project.projectmanager}
             // projectManagerImage={project.projectmanageromage}
